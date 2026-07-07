@@ -216,7 +216,7 @@ p {
 }
 
 .property-card {
-  position: relative;
+  display: grid;
   width: 450px;
   overflow: hidden;
   border-radius: 0px;

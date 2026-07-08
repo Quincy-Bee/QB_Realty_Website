@@ -195,6 +195,7 @@ p {
 }
 
 .mainTextToo {
+  width: 60%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 50;
   font-size: 18px;
@@ -216,96 +217,76 @@ p {
 }
 
 .property-card {
-  display: grid;
-  width: 450px;
-  overflow: hidden;
-  border-radius: 0px;
-}
-
-.property-card2 {
   position: relative;
-  width: 450px;
+  width: 500px;
+  height: 300px;
   overflow: hidden;
-  border-radius: 0px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(1, 1, 1, 4);
 }
 
 .property-card img {
-  border-radius: 10px;
-  width: 500px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
+  border-radius: 10px;
 }
 
-.property-card:hover img {
-  transform: scale(1.05);
-}
-
-.overlay {
-  font-family: Arial, Helvetica, sans-serif;
+/* FOR SALE badge */
+.listing-status {
   position: absolute;
   top: 15px;
   left: 15px;
-  background: #ffffff86;
-  color: #484848;
-  padding: 2px 5px;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  border-radius: 4px;
-}
-
-.overlay2 {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-  position: absolute;
-  top: 281px;
-  left: 0px;
-  width: 220px;
-  background: #8a1d1df1;
-  color: #ffffff;
-  padding: 2px 5px;
+  background: white;
+  color: #333;
+  padding: 8px 15px;
+  font-family: Arial, sans-serif;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 2px;
-  border-radius: 4px;
+  z-index: 2;
+  border-radius: 30px;
 }
 
-.property-info {
-
-  font-weight: 300;
-  color: #030303;
-  font-family: helvetica;
-  background-color: rgba(255, 255, 255, 0.827);
+/* White property box */
+.property-details {
+  position:absolute;
+  bottom: 10px;
+  left: 230px;
+  background: rgba(255, 255, 255, 0.714);
+  width: 240px;
+  height: 160px;
   padding: 10px;
-  width: 100%;
-
+  z-index: 2;
+  border-radius: 20px;
 }
 
-.property-info2 {
-
-  font-weight: 300;
-  color: #030303;
-  font-family: helvetica;
-  background-color: rgba(255, 255, 255, 0.827);
-  padding: 10px;
-  width: 100%;
-
+.property-details h3 {
+  margin: 0 0 10px;
+  font-family: "Times New Roman", serif;
+  font-size: 40px;
+  color: rgb(73, 73, 73);
+  
 }
 
-.price {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 55px;
+.property-meta {
+  display: flex;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  
+}
+
+.property-details p {
+  padding: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
   font-weight: bolder;
-  font-weight: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.price2 {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 55px;
-  font-weight: bolder;
-  font-weight: 30px;
-}
 
 .listWithUs {
   margin: 20px;

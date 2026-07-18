@@ -295,7 +295,7 @@ body {
 .mainText {
   border: 2px;
   border-color: white;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 900;
   text-shadow: 9px 8px 4px rgba(0, 0, 0, 0.235);
 
@@ -328,7 +328,7 @@ body {
 .mainTextToo {
   width: 70%;
   font-family: Helvetica;
-  font-size: 18px;
+  font-size: 12px;
   color: white;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -584,12 +584,9 @@ a {
   }
 }
 
-
-
   #menu-toggle:checked+.hamburger+.nav-links {
     display: flex;
   }
-
 
 
   .nav-links a {
@@ -830,4 +827,3 @@ a {
 }
 
 
-}

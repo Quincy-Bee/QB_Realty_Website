@@ -40,20 +40,39 @@
 .nav-links {
   display: flex;
   gap: 14px;
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0.288)0%,
+      rgba(250, 157, 205, 0.308)45%,
+      rgba(255, 255, 255, 0.944)50%,
+      rgba(255, 255, 255, .1)55%,
+      rgba(255, 255, 255, 0.358)100%);
+
+  background-size: 200% 100%;
+  background-position: -100% 0;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(247, 239, 239, 0.334);
+
+  /* mainText stroke */
+  -webkit-text-stroke: 0.9px rgba(255, 255, 255, 0.924);
+
+  animation: shine 3s linear infinite;
 }
+
+@keyframes shine {
+  to {
+    background-position: 100% 0;
+  }
+}
+
 
 .nav-links a {
 
   text-decoration: none;
-
   color: rgba(249, 248, 248, 0.243);
-
-  font-weight: 500;
-
-  padding: 12px 20px;
-
-  border-radius: 999px;
-
+  font-weight: 100;
+  border-radius: 90px;
   transition: .35s;
 }
 
@@ -63,7 +82,6 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-
   background:
     linear-gradient(180deg,
 
@@ -139,7 +157,7 @@
 
 .nav-links a:hover {
   background-color: rgba(85, 85, 85, 0.263);
-  */ color: #a7e0ff5a;
+  color: #a7e0ff5a;
 }
 
 
@@ -540,23 +558,31 @@ a {
 
 
     /* Glass Effect */
-    background: rgba(255, 255, 255, 0.15);
+    background:linear-gradient(120deg,
+      rgba(255, 255, 255, 0.585)0%,
+      rgba(250, 157, 205, 0.308)45%,
+      rgba(255, 255, 255, 0.944)50%,
+      rgba(255, 255, 255, .1)55%,
+      rgba(255, 255, 255, 0.358)100%);
 
-    backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
+  background-size: 200% 100%;
+  background-position: -100% 0;
 
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(247, 239, 239, 0.334);
 
-    border: 1px solid rgba(255, 255, 255, 0.5);
+  /* mainText stroke */
+  -webkit-text-stroke: 0.9px rgba(255, 255, 255, 0.924);
 
+  animation: shine 3s linear infinite;
+}
 
-    box-shadow:
-      0 10px 40px rgba(0, 0, 0, .25),
-      inset 0 1px 1px rgba(255, 255, 255, .35),
-      inset 0 -1px 1px rgba(255, 255, 255, .15);
-
-
-    z-index: 999;
+@keyframes shine {
+  to {
+    background-position: 100% 0;
   }
+}
 
 
 
@@ -577,6 +603,31 @@ a {
     border-radius: 999px;
 
     transition: .35s;
+    background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0.288)0%,
+      rgba(250, 157, 205, 0.308)45%,
+      rgba(255, 255, 255, 0.944)50%,
+      rgba(255, 255, 255, .1)55%,
+      rgba(255, 255, 255, 0.358)100%);
+
+  background-size: 200% 100%;
+  background-position: -100% 0;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(247, 239, 239, 0.334);
+
+  /* mainText stroke */
+  -webkit-text-stroke: 0.9px rgba(255, 255, 255, 0.924);
+
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 100% 0;
+  }
+};
 
   }
 
@@ -584,7 +635,34 @@ a {
 
   .nav-links a:hover {
 
-    background: rgba(255, 255, 255, .15);
+    background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0.288)0%,
+      rgba(250, 157, 205, 0.308)45%,
+      rgba(255, 255, 255, 0.944)50%,
+      rgba(255, 255, 255, .1)55%,
+      rgba(255, 255, 255, 0.358)100%);
+
+  background-size: 200% 100%;
+  background-position: -100% 0;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(247, 239, 239, 0.334);
+
+  /* mainText stroke */
+  -webkit-text-stroke: 0.9px rgba(255, 255, 255, 0.924);
+
+  animation: shine 3s linear infinite;
+}
+
+
+@keyframes shine {
+  to {
+    background-position: 100% 0;
+  }
+};
+
+{
 
     border: 1px solid rgba(255, 255, 255, .3);
 
@@ -604,8 +682,9 @@ a {
 
   .hero {
     height: auto;
-    min-height: 80vh;
-    padding: 160px 20px 40px;
+    min-height: auto;
+    padding: 60px 20px 40px;
+    /* very close */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -614,10 +693,9 @@ a {
   }
 
 
-
   .mainText {
 
-    font-size: 46px;
+    font-size: 30px;
     line-height: 1.2;
     padding: 380px 20px 40px;
 
@@ -625,14 +703,13 @@ a {
 
 
 
-  .mainTextToo {
-
-    width: 90%;
-    font-size: 16px;
-    padding: auto;
-
-  }
-
+.mainTextToo {
+  width: 70%;
+  font-size: 20px;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 
   /* PROPERTY */
@@ -697,7 +774,7 @@ a {
 
 .hero {
   height: auto;
-  min-height: 80vh;
+  min-height: 90vh;
   padding: 40px 20px;
 }
 
@@ -709,8 +786,8 @@ a {
 
 
 .mainTextToo {
-  width: 90%;
-  font-size: 16px;
+  width: 70%;
+  font-size: 24px;
   line-height: 1.5;
 }
 

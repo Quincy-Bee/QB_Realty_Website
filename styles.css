@@ -768,8 +768,6 @@ a {
   }
 
 
-}
-
 /* HERO */
 
 .hero {
@@ -780,8 +778,8 @@ a {
 
 
 .mainText {
-  font-size: 36px;
-  line-height: 1.2;
+  font-size: 70px;
+  line-height: 1;
 }
 
 

@@ -35,7 +35,7 @@
   gap: 14px;
   background: linear-gradient(120deg,
       rgba(255, 255, 255, 0.288)0%,
-      rgba(250, 157, 205, 0.308)45%,
+      rgba(248, 245, 246, 0.638)45%,
       rgba(255, 255, 255, 0.944)50%,
       rgba(255, 255, 255, .1)55%,
       rgba(255, 255, 255, 0.358)100%);
@@ -251,23 +251,29 @@ body {
 
 
 .brokerPhoto {
-  margin-top: 200px;
-  padding: 30px;
-  border-radius: 500px;
-  display: flex;
-  justify-content: center;
-
+  border-radius: 80px;
+  width: 600px;
+  height: auto;
+  margin-bottom:20px;
+  margin-top: 40px;
 }
 
 
 .brokerBio {
   color: white;
+  font-size: 22px;
   text-align: center;
-  padding: 30px;
-  max-width: 100%;
+  max-width: 900px;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
 
-.about {}
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top:150px;
+}
 
 
 /* ============================= */
@@ -286,10 +292,12 @@ body {
 }
 
 .mainText {
-  border: 2px;
-  border-color: white;
   font-size: 3em;
   font-weight: 900;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
   text-shadow: 9px 8px 4px rgba(0, 0, 0, 0.235);
 
   background: linear-gradient(120deg,
@@ -305,8 +313,6 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: rgba(247, 239, 239, 0.334);
-
-  /* mainText stroke */
   -webkit-text-stroke: 0.9px rgba(255, 255, 255, 0.924);
 
   animation: shine 3.5s linear infinite;
@@ -514,7 +520,7 @@ a {
 @media (max-width:768px) {
 
   .qbLogo {
-    display:none;
+    display: none;
     width: 50%;
     height: 50%;
 
@@ -683,13 +689,12 @@ a {
 }
 
 
-.mainText {
-
-  font-size: 30px;
-  line-height: 1.2;
-  padding: 380px 20px 40px;
-
-}
+  .mainText {
+    font-size: 40px;
+    line-height: 1.2;
+    padding: 0;
+    margin: 10px 0 30px;
+  }
 
 
 
@@ -768,7 +773,7 @@ a {
 
 
 .mainText {
-  font-size: 40px;
+  font-size: 60px;
   line-height: 1;
 }
 
@@ -817,4 +822,39 @@ a {
 
 .property-details p {
   font-size: 11px;
+}
+
+.footer {
+  color: white;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  padding: 5px;
+
+
+}
+
+#neighborhoods {
+  text-transform: uppercase;
+  justify-content: center;
+  width: 2px;
+  height: 550px;
+  padding: 5px;
+  padding-top: 20px;
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0.288)0%,
+      rgba(250, 157, 205, 0.308)45%,
+      rgba(255, 255, 255, 0.944)50%,
+      rgba(255, 255, 255, .1)55%,
+      rgba(255, 255, 255, 0.358)100%);
+  border-radius: 15px;
+}
+
+.neighborhoodContainer {
+  display: flex; 
+  flex-direction: row;
+
+}
+
+.doc {
+  flex: 0 0 300px;
 }

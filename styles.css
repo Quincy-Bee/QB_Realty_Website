@@ -17,7 +17,7 @@
 ------------------------------ */
 .nav-links a:hover {
 
-  background: rgba(255, 255, 255, 0.059);
+  background: rgba(255, 255, 255, 0.424);
 
   backdrop-filter: blur(8px);
 
@@ -45,7 +45,7 @@
 
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: rgba(247, 239, 239, 0.334);
+  -webkit-text-fill-color: rgba(247, 239, 239, 0.523);
 
   /* mainText stroke */
   -webkit-text-stroke: 0.9px rgba(255, 255, 255, 0.924);
@@ -63,7 +63,7 @@
 .nav-links a {
 
   text-decoration: none;
-  color: rgba(249, 248, 248, 0.243);
+  color: rgba(249, 248, 248, 0.581);
   font-weight: 100;
   border-radius: 90px;
   transition: .35s;
@@ -81,7 +81,7 @@
       rgba(255, 255, 255, 2.604),
       rgba(255, 255, 255, 0.44),
       rgba(240, 176, 250, 0.143),
-      rgba(254, 254, 254, 0),
+      rgba(254, 254, 254, 0.122),
       transparent 55%);
 
   pointer-events: none;
@@ -105,7 +105,7 @@
 
   border-radius: 100px;
 
-  background: rgba(249, 248, 248, 0);
+  background: rgba(249, 248, 248, 0.021);
 
   backdrop-filter: blur(25px) saturate(180%);
   -webkit-backdrop-filter: blur(25px) saturate(180%);
@@ -142,15 +142,15 @@
   color: rgb(253, 252, 252);
   text-decoration: none;
   transition: 1s;
-  border: 1px solid #fcfafa93;
+  border: 1px solid #fcfafad5;
   margin: 3px;
   padding: 5px;
 }
 
 
 .nav-links a:hover {
-  background-color: rgba(85, 85, 85, 0.263);
-  color: #a7e0ff5a;
+  background-color: rgba(248, 245, 245, 0.823);
+  color: #f9fafbcd;
 }
 
 
@@ -168,7 +168,7 @@
 
 #menu-toggle {
   display: none;
-  background-color: #333;
+  background-color: #efeeee;
 
 }
 
@@ -255,7 +255,7 @@ body {
   width: 350px;
   height: auto;
   margin-bottom: 1px;
- 
+
 }
 
 
@@ -600,7 +600,7 @@ a {
         rgb(255, 255, 255)0%,
         rgba(250, 157, 205, 0.308)45%,
         rgba(255, 255, 255, 0.944)50%,
-        rgba(255, 255, 255, .1)55%,
+        rgba(255, 255, 255, 0.387)55%,
         rgba(255, 255, 255, 0.358)100%);
 
     background-size: 200% 100%;
@@ -627,10 +627,10 @@ a {
 .nav-links a:hover {
 
   background: linear-gradient(120deg,
-      rgba(255, 255, 255, 0.288)0%,
-      rgba(250, 157, 205, 0.308)45%,
+      rgba(255, 255, 255, 0.5)0%,
+      rgba(249, 197, 224, 0.308)45%,
       rgba(255, 255, 255, 0.944)50%,
-      rgba(255, 255, 255, .1)55%,
+      rgba(255, 255, 255, 0.466)55%,
       rgba(255, 255, 255, 0.358)100%);
 
   background-size: 200% 100%;
@@ -712,9 +712,7 @@ a {
 .property-card {
 
   margin: 40px auto;
-
   width: 100%;
-
   height: 260px;
 
 }
@@ -722,13 +720,9 @@ a {
 
 
 .property-details {
-
   width: 200px;
-
   height: auto;
-
   right: 10px;
-
   bottom: 10px;
 
 }
@@ -817,36 +811,7 @@ a {
   font-size: 11px;
 }
 
-.footer {
-  color: white;
 
-  width: 100%;
-  padding: 5px;
-
-
-}
-
-#neighborhoods {
-  text-transform: uppercase;
-  justify-content: center;
-  width: 2px;
-  height: 550px;
-  padding: 5px;
-  padding-top: 20px;
-  background: linear-gradient(120deg,
-      rgba(255, 255, 255, 0.288)0%,
-      rgba(250, 157, 205, 0.308)45%,
-      rgba(255, 255, 255, 0.944)50%,
-      rgba(255, 255, 255, .1)55%,
-      rgba(255, 255, 255, 0.358)100%);
-  border-radius: 15px;
-}
-
-.neighborhoodContainer {
-  display: flex;
-  flex-direction: row;
-
-}
 
 .doc {
   flex: 0 0 300px;

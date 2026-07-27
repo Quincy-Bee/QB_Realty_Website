@@ -254,7 +254,7 @@ body {
   border-radius: 80px;
   width: 450px;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 1px;
  
 }
 
@@ -294,7 +294,7 @@ body {
 .mainText {
   font-size: 3em;
   font-weight: 900;
-  padding-top: 30px;
+  padding-top: 20px;
   text-shadow: 9px 8px 4px rgba(0, 0, 0, 0.235);
 
   background: linear-gradient(120deg,

@@ -2,68 +2,181 @@
 <html lang="en">
 
 <head>
-       <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QB REALTY GROUP | Real Estate Brokerage</title>
+
+    <title>Buy | QB Realty Group</title>
+
     <link rel="stylesheet" href="styles.css">
 
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="./images/favicon-96x96.png" sizes="96x96" />
-
+    <link rel="icon"
+          type="image/png"
+          href="./images/favicon-96x96.png"
+          sizes="96x96">
 </head>
 
 <body>
 
-    <!-- 🔥 VIDEO BACKGROUND (ADD THIS) -->
-    <div class="video-bg">
-        <video autoplay muted loop playsinline>
-            <source src="./images/brooklyn-nyc-real-estate-hero-video 2.mp4" type="video/mp4">
-        </video>
-        <div class="video-overlay"></div>
-    </div>
+<header class="site-header">
 
-    <!-- ALL YOUR CONTENT WRAPPED ABOVE VIDEO -->
-    <div class="page-content">
+    <a href="./index.html" class="brand">
+        QB REALTY GROUP
+    </a>
 
-        <header class="navbar">
-            <!-- <img src="" alt="" width="60px; heigt=60px;"> -->
-            <input type="checkbox" id="menu-toggle" />
-            <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <nav class="site-nav">
+        <a href="./buy.html" class="active">BUY</a>
+        <a href="./sell.html">SELL</a>
+        <a href="./rent.html">RENT</a>
+        <a href="./about.html">ABOUT</a>
+        <a href="./contact.html">CONTACT</a>
+    </nav>
 
-            <nav class="nav-links">
-                <a href="./index.html">Home</a>
-                <a href="./buy.html">Buy</a>
-                <!-- <a href="./sell.html">Sell</a> -->
-                <!-- <a href="./rent.html">Rent</a> -->
-                <a href="./about.html">About</a>
-                <!--<a href="./joinus.html">Join Us</a>-->
-                <a href="https://www.instagram.com/qbrealtyny/">Instagram</a>
-                <a href="mailto:info@qbrealtyny.com">Contact</a>
-            </nav>
-        </header>
+    <button class="menu-toggle" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+    </button>
 
-        <div class="hero">
-            <div class="mainText">FEATURED PROPERTIES</div>
-            <div class="mainTextToo">We represent some of the city’s most sought-after properties. Explore our exclusive
-                listings across the market’s finest locations.
+</header>
+
+
+<main>
+
+    <section class="page-intro">
+
+        <span class="eyebrow">
+            QB REALTY GROUP
+        </span>
+
+        <h1>
+            FEATURED<br>
+            PROPERTIES
+        </h1>
+
+        <p>
+            A curated selection of properties represented
+            by QB Realty Group across New York City.
+        </p>
+
+    </section>
+
+
+    <section class="featured-listing">
+
+        <a
+            href="https://streeteasy.com/building/1710-carroll-street-brooklyn/d5"
+            target="_blank"
+            class="featured-image">
+
+            <img
+                src="./images/7876b1738006db3cecf857ec42f02eb3-se_extra_large_1500_800.jpg"
+                alt="1710 Carroll Street D5">
+
+            <span class="property-tag">
+                FOR SALE
+            </span>
+
+        </a>
+
+
+        <div class="featured-details">
+
+            <div>
+                <span class="property-number">
+                    01
+                </span>
             </div>
 
-            <div class="property-card">
+            <div>
 
-                <a href="https://streeteasy.com/building/1710-carroll-street-brooklyn/d5?utm_campaign=sale_listing&utm_medium=share&utm_source=web&lstt=aGdcj8CmOmpN1xv2Qx0Z59rQgcJAJypiwNu5CvlldQBSLBti_x4P5iul_HyRsU-5wikrpHcJfe6Oe2GB"><img src="./images/7876b1738006db3cecf857ec42f02eb3-se_extra_large_1500_800.jpg" alt="Exclusive listing"></a>
-                    
+                <span class="property-location">
+                    WEEKSVILLE · BROOKLYN
+                </span>
 
-                <div class="listing-status">
-                    FOR SALE
+                <h2>
+                    1710 CARROLL<br>
+                    STREET #D5
+                </h2>
+
+            </div>
+
+            <div>
+
+                <div class="property-price">
+                    $169,000
                 </div>
 
-                <div class="property-details">
-                    <p>1710 Carroll St #D5, Brooklyn NY 11213</p>
-                    <h3>$169,000</h3>
+                <div class="property-meta">
+                    <span>1 BEDROOM</span>
+                    <span>1 BATHROOM</span>
+                </div>
 
-                    <div class="property-meta">
-                        <span>1 Bedroom</span>
-                        <span>1 Bathroom</span>
-                    </div>
+                <p>
+                    A one-bedroom co-op opportunity in Brooklyn's
+                    Weeksville neighborhood.
+                </p>
+
+                <a
+                    href="https://streeteasy.com/building/1710-carroll-street-brooklyn/d5"
+                    target="_blank"
+                    class="text-link">
+
+                    VIEW PROPERTY <span>↗</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="buy-cta">
+
+        <span class="eyebrow">
+            BUY WITH QB
+        </span>
+
+        <h2>
+            FIND THE RIGHT
+            OPPORTUNITY.
+        </h2>
+
+        <p>
+            Looking for something specific?
+            Tell us what you're looking for and we'll
+            help you navigate the market.
+        </p>
+
+        <a href="./contact.html" class="button button-dark">
+            START YOUR SEARCH
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-brand">
+        QB REALTY GROUP
+    </div>
+
+    <div class="footer-links">
+        <a href="./buy.html">BUY</a>
+        <a href="./sell.html">SELL</a>
+        <a href="./rent.html">RENT</a>
+        <a href="./about.html">ABOUT</a>
+        <a href="./contact.html">CONTACT</a>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 QB REALTY GROUP LLC</span>
+        <span>NEW YORK CITY</span>
+    </div>
+
+</footer>
 
 </body>
+</html>

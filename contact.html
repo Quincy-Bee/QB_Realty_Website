@@ -1,50 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QB REALTY GROUP | Real Estate Brokerage</title>
-    <link rel="stylesheet" href="styles.css">
 
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="./images/favicon-96x96.png" sizes="96x96" />
+    <title>Contact | QB Realty Group</title>
 
+    <meta
+        name="description"
+        content="Contact QB Realty Group for strategic real estate representation across New York City."
+    >
+
+    <link rel="icon" type="image/png" href="./images/favicon-96x96.png">
+
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
 
-    <!--VIDEO BACKGROUND-->
-    <div class="video-bg">
-        <video autoplay muted loop playsinline>
-            <source src="./images/dji_mimo_20250610_172724_20250610162710_1750431392734_video.mov" type="video/mp4">
-        </video>
-        <div class="video-overlay"></div>
+    <!-- HEADER -->
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            QB REALTY GROUP
+        </a>
+
+        <nav class="site-nav">
+            <a href="buy.html">BUY</a>
+            <a href="sell.html">SELL</a>
+            <a href="rent.html">RENT</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html" class="active">CONTACT</a>
+        </nav>
+
+        <button class="menu-toggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+
+    <!-- CONTACT PAGE -->
+    <main class="contact-page">
+
+        <section class="contact-layout">
+
+            <!-- LEFT -->
+            <div class="contact-intro">
+
+                <span class="eyebrow">
+                    GET IN TOUCH
+                </span>
+
+                <h1>
+                    LET'S TALK<br>
+                    ABOUT YOUR<br>
+                    NEXT MOVE.
+                </h1>
+
+                <p>
+                    Whether you're preparing to sell, searching for the
+                    right property, or exploring what's next, QB Realty
+                    Group is here to help you move with intention.
+                </p>
+
+                <div class="contact-details">
+
+                    <div class="contact-detail">
+                        <span class="detail-label">EMAIL</span>
+                        <a href="mailto:info@qbrealtyny.com">
+                            info@qbrealtyny.com
+                        </a>
+                    </div>
+
+                    <div class="contact-detail">
+                        <span class="detail-label">INSTAGRAM</span>
+                        <a
+                            href="https://www.instagram.com/qbrealtyny/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            @QBREALTYNY
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+            <div class="contact-form-wrap">
+
+                <span class="eyebrow">
+                    START A CONVERSATION
+                </span>
+
+                <!-- FORM -->
+                <form
+                    id="contactForm"
+                    class="contact-form"
+                    action="https://formsubmit.co/info@qbrealtyny.com"
+                    method="POST"
+                >
+
+                    <!-- FormSubmit settings -->
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Inquiry — QB Realty Group"
+                    >
+
+                    <input
+                        type="hidden"
+                        name="_captcha"
+                        value="false"
+                    >
+
+                    <input
+                        type="hidden"
+                        name="_template"
+                        value="table"
+                    >
+
+
+                    <!-- NAME -->
+                    <div class="form-group">
+                        <label for="name">
+                            FULL NAME
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+                        <label for="email">
+                            EMAIL ADDRESS
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Your email"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+
+                    <!-- PHONE -->
+                    <div class="form-group">
+                        <label for="phone">
+                            PHONE NUMBER
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Your phone number"
+                            autocomplete="tel"
+                        >
+                    </div>
+
+
+                    <!-- INTEREST -->
+                    <div class="form-group">
+                        <label for="interest">
+                            I'M INTERESTED IN
+                        </label>
+
+                        <select
+                            id="interest"
+                            name="interest"
+                            required
+                        >
+                            <option value="" disabled selected>
+                                Select an option
+                            </option>
+
+                            <option value="Selling">
+                                Selling
+                            </option>
+
+                            <option value="Buying">
+                                Buying
+                            </option>
+
+                            <option value="Renting">
+                                Renting
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+                        </select>
+                    </div>
+
+
+                    <!-- MESSAGE -->
+                    <div class="form-group">
+                        <label for="message">
+                            MESSAGE
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Tell us a little about your plans..."
+                            required
+                        ></textarea>
+                    </div>
+
+
+                    <!-- SUBMIT -->
+                    <button
+                        type="submit"
+                        class="button button-dark"
+                    >
+                        SEND INQUIRY
+                    </button>
+
+                </form>
+
+
+                <!-- SUCCESS MESSAGE -->
+                <div
+                    id="formSuccess"
+                    class="form-success"
+                    aria-live="polite"
+                >
+
+                    <span class="eyebrow">
+                        INQUIRY RECEIVED
+                    </span>
+
+                    <h2>
+                        THANK YOU.
+                    </h2>
+
+                    <p>
+                        Your inquiry has been received. A member of
+                        QB Realty Group will be in touch shortly.
+                    </p>
+
+                    <a
+                        href="index.html"
+                        class="text-link"
+                    >
+                        RETURN HOME →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+        <div class="footer-branding">
+            <div class="footer-logo">
+                QB REALTY GROUP
+            </div>
+
+            <p>
+                Strategic real estate representation
+                across New York City.
+            </p>
+        </div>
+
+        <div class="footer-column">
+
+            <span class="footer-label">
+                EXPLORE
+            </span>
+
+            <nav class="footer-nav">
+                <a href="buy.html">BUY</a>
+                <a href="sell.html">SELL</a>
+                <a href="rent.html">RENT</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+
+        </div>
+
+        <div class="footer-column">
+
+            <span class="footer-label">
+                CONNECT
+            </span>
+
+            <div class="footer-contact">
+
+                <a href="mailto:info@qbrealtyny.com">
+                    info@qbrealtyny.com
+                </a>
+
+                <a
+                    href="https://www.instagram.com/qbrealtyny/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    @qbrealtyny
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <!-- ALL YOUR CONTENT WRAPPED ABOVE VIDEO -->
-    <div class="page-content">
 
-        <header class="navbar">
-            <img src="./images/QB_CHROME.jpg" alt="QB Realty Logo" width="60px; heigt=60px;">
-            <input type="checkbox" id="menu-toggle" />
-            <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <div class="footer-bottom">
 
-            <nav class="nav-links">
-                    <a href="./index.html">Home</a>
-                 <a href="./buy.html">Buy</a>
-                <a href="./sell.html">Sell</a>
-                <a href="./rent.html">Rent</a>
-                <a href="./about.html">About</a>
-                <!--<a href="./joinus.html">Join Us</a>-->
-                <a href="https://www.instagram.com/qbrealtyny/">Instagram</a>
-                <a href="mailto:info@qbrealtyny.com">Contact</a>
-            </nav>
-        </header>
+        <span>
+            © 2026 QB REALTY GROUP LLC
+        </span>
 
-      <div class="hero">
-  <div class="mainText">HOME IS WHERE THE HEART IS</div>
-  <div class="mainTextToo">Premium real estate opportunities in NYC’s most sought-after locations.</div>
-      
+        <span>
+            NEW YORK CITY
+        </span>
+
+    </div>
+
+</footer>
+
+
+    <!-- FORM SCRIPT -->
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const formSuccess = document.getElementById("formSuccess");
+
+        contactForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const submitButton =
+                contactForm.querySelector("button[type='submit']");
+
+            const originalText = submitButton.textContent;
+
+            submitButton.disabled = true;
+            submitButton.textContent = "SENDING...";
+
+            try {
+                const response = await fetch(
+                    contactForm.action,
+                    {
+                        method: "POST",
+                        body: new FormData(contactForm),
+                        headers: {
+                            "Accept": "application/json"
+                        }
+                    }
+                );
+
+                if (response.ok) {
+
+                    contactForm.style.display = "none";
+
+                    formSuccess.classList.add("show");
+
+                    contactForm.reset();
+
+                } else {
+                    throw new Error("Submission failed");
+                }
+
+            } catch (error) {
+
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+
+                alert(
+                    "There was a problem sending your inquiry. Please email info@qbrealtyny.com directly."
+                );
+            }
+        });
+    </script>
+
+
+    <!-- MOBILE MENU -->
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const siteNav = document.querySelector(".site-nav");
+
+        if (menuToggle && siteNav) {
+
+            menuToggle.addEventListener("click", () => {
+
+                menuToggle.classList.toggle("open");
+                siteNav.classList.toggle("open");
+
+            });
+
+        }
+    </script>
+
+    <script>
+const contactForm = document.getElementById("contactForm");
+const formSuccess = document.getElementById("formSuccess");
+
+contactForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector("button[type='submit']");
+    const originalText = submitButton.textContent;
+
+    submitButton.disabled = true;
+    submitButton.textContent = "SENDING...";
+
+    try {
+        const response = await fetch(contactForm.action, {
+            method: "POST",
+            body: new FormData(contactForm),
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+
+        if (response.ok) {
+            contactForm.style.display = "none";
+            formSuccess.classList.add("show");
+            contactForm.reset();
+        } else {
+            throw new Error("Submission failed");
+        }
+    } catch (error) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
+
+        alert(
+            "There was a problem sending your inquiry. Please email info@qbrealtyny.com directly."
+        );
+    }
+});
+</script>
 
 </body>
+</html>

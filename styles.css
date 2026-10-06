@@ -1638,42 +1638,637 @@ h3 {
 
 
 /* =========================================================
-   MOBILE
+   QB REALTY GROUP
+   MOBILE SITE SYSTEM
 ========================================================= */
 
 @media (max-width: 800px) {
 
-    .site-footer {
-        padding: 65px 22px 24px;
+    /* -----------------------------------------------------
+       GLOBAL
+    ----------------------------------------------------- */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
-    .footer-main {
-        grid-template-columns: 1fr;
-        gap: 48px;
-        padding-bottom: 65px;
+    body {
+        font-size: 14px;
     }
 
-    .footer-branding {
-        max-width: 320px;
+    img,
+    video {
+        max-width: 100%;
     }
 
-    .footer-logo {
-        font-size: 15px;
+    .container,
+    .page-container {
+        width: 100%;
+        padding-left: 22px;
+        padding-right: 22px;
     }
 
-    .footer-branding p {
-        max-width: 270px;
-        margin-top: 18px;
-        font-size: 12px;
+
+    /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
+    .site-header {
+        height: 72px;
+        padding: 0 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 100;
+    }
+
+    .brand {
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        white-space: nowrap;
+    }
+
+    .site-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+        width: 34px;
+        height: 34px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 6px;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 22px;
+        height: 1px;
+        background: #111;
+        transition: all 0.3s ease;
+    }
+
+    .menu-toggle span:last-child {
+        width: 15px;
+    }
+
+    .menu-toggle.open span:first-child {
+        width: 22px;
+        transform: translateY(3.5px) rotate(45deg);
+    }
+
+    .menu-toggle.open span:last-child {
+        width: 22px;
+        transform: translateY(-3.5px) rotate(-45deg);
+    }
+
+
+    /* MOBILE NAV */
+
+    .site-nav.open {
+        display: flex;
+        position: fixed;
+        inset: 72px 0 0 0;
+        z-index: 99;
+
+        background: #f3f1ec;
+
+        padding: 55px 22px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .site-nav.open a {
+        display: block;
+        width: 100%;
+
+        padding: 17px 0;
+
+        border-bottom: 1px solid #d4d1ca;
+
+        font-size: 13px;
+        letter-spacing: 0.16em;
+    }
+
+
+    /* -----------------------------------------------------
+       TYPOGRAPHY
+    ----------------------------------------------------- */
+
+    h1 {
+        font-size: clamp(42px, 13vw, 68px);
+        line-height: 0.94;
+        letter-spacing: -0.045em;
+    }
+
+    h2 {
+        font-size: clamp(36px, 10vw, 54px);
+        line-height: 0.96;
+        letter-spacing: -0.04em;
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    p {
+        font-size: 14px;
         line-height: 1.7;
     }
 
-    .footer-column {
-        padding-top: 0;
+    .eyebrow {
+        display: block;
+        margin-bottom: 18px;
+
+        font-size: 8px;
+        letter-spacing: 0.2em;
+        line-height: 1.4;
+    }
+
+
+    /* -----------------------------------------------------
+       BUTTONS
+    ----------------------------------------------------- */
+
+    .button {
+        min-height: 50px;
+        padding: 0 22px;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 9px;
+        letter-spacing: 0.16em;
+    }
+
+
+    /* -----------------------------------------------------
+       HOME — HERO
+    ----------------------------------------------------- */
+
+    .hero {
+        min-height: calc(100svh - 72px);
+        height: calc(100svh - 72px);
+
+        padding: 40px 22px 45px;
+
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        max-width: 360px;
+        margin-bottom: 24px;
+
+        font-size: clamp(45px, 13vw, 68px);
+        line-height: 0.91;
+    }
+
+    .hero p {
+        max-width: 320px;
+        margin-bottom: 28px;
+
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .hero-actions .button {
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       GENERAL SECTIONS
+    ----------------------------------------------------- */
+
+    section {
+        width: 100%;
+    }
+
+    .section {
+        padding: 75px 22px;
+    }
+
+    .section-header {
+        margin-bottom: 42px;
+    }
+
+    .section-header p {
+        max-width: 330px;
+    }
+
+
+    /* -----------------------------------------------------
+       TWO-COLUMN DESKTOP → SINGLE COLUMN
+    ----------------------------------------------------- */
+
+    .split,
+    .two-column,
+    .content-grid,
+    .section-grid,
+    .editorial-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 42px;
+    }
+
+
+    /* -----------------------------------------------------
+       IMAGES
+    ----------------------------------------------------- */
+
+    .section-image,
+    .image-block,
+    .editorial-image {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    .section-image img,
+    .image-block img,
+    .editorial-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+
+    /* -----------------------------------------------------
+       SELL
+    ----------------------------------------------------- */
+
+    .sell-page,
+    .sell-section {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .sell-hero {
+        min-height: auto;
+        padding: 80px 22px 65px;
+    }
+
+    .sell-hero h1 {
+        max-width: 350px;
+    }
+
+    .sell-hero p {
+        max-width: 330px;
+        margin-top: 25px;
+    }
+
+    .sell-section {
+        padding-top: 70px;
+        padding-bottom: 75px;
+    }
+
+    .sell-section h2 {
+        max-width: 340px;
+    }
+
+
+    /* -----------------------------------------------------
+       PROCESS / NUMBERED SECTIONS
+    ----------------------------------------------------- */
+
+    .process-grid,
+    .process-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .process-item {
+        padding: 25px 0;
+        border-top: 1px solid #d4d1ca;
+    }
+
+    .process-item:last-child {
+        border-bottom: 1px solid #d4d1ca;
+    }
+
+    .process-item h3 {
+        margin-bottom: 12px;
+    }
+
+    .process-item p {
+        max-width: 320px;
+    }
+
+
+    /* -----------------------------------------------------
+       BUY / PROPERTIES
+    ----------------------------------------------------- */
+
+    .property-feature {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .property-image {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        overflow: hidden;
+    }
+
+    .property-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .property-info {
+        width: 100%;
+    }
+
+    .property-info h1,
+    .property-info h2 {
+        margin-bottom: 20px;
+    }
+
+    .property-meta {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        padding: 20px 0;
+        margin: 25px 0;
+
+        border-top: 1px solid #d4d1ca;
+        border-bottom: 1px solid #d4d1ca;
+    }
+
+    .property-meta span {
+        display: block;
+    }
+
+
+    /* -----------------------------------------------------
+       RENT
+    ----------------------------------------------------- */
+
+    .rent-hero {
+        padding: 80px 22px 65px;
+    }
+
+    .rent-hero h1 {
+        max-width: 350px;
+    }
+
+    .rent-categories {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rent-category {
+        padding: 22px 0;
+        border-top: 1px solid #d4d1ca;
+    }
+
+    .rent-category:last-child {
+        border-bottom: 1px solid #d4d1ca;
+    }
+
+
+    /* -----------------------------------------------------
+       ABOUT
+    ----------------------------------------------------- */
+
+    .about-hero {
+        padding: 80px 22px 65px;
+    }
+
+    .about-hero h1 {
+        max-width: 340px;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-image {
+        order: 1;
+        width: 100%;
+    }
+
+    .about-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .about-copy {
+        order: 2;
+    }
+
+    .about-copy p {
+        max-width: 340px;
+    }
+
+
+    /* -----------------------------------------------------
+       CONTACT
+    ----------------------------------------------------- */
+
+    .contact-page {
+        padding: 0;
+    }
+
+    .contact-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-intro {
+        padding: 75px 22px 65px;
+    }
+
+    .contact-intro h1 {
+        max-width: 350px;
+        margin-bottom: 25px;
+    }
+
+    .contact-intro > p {
+        max-width: 340px;
+    }
+
+    .contact-details {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .contact-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .detail-label {
+        font-size: 8px;
+        letter-spacing: 0.2em;
+    }
+
+    .contact-detail a {
+        font-size: 13px;
+    }
+
+
+    /* FORM */
+
+    .contact-form-wrap {
+        padding: 65px 22px 75px;
+    }
+
+    .contact-form-wrap > .eyebrow {
+        margin-bottom: 35px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 27px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 9px;
+
+        font-size: 8px;
+        letter-spacing: 0.17em;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        min-height: 48px;
+
+        padding: 13px 0;
+
+        border: 0;
+        border-bottom: 1px solid #aaa69e;
+        border-radius: 0;
+
+        background: transparent;
+
+        font-family: inherit;
+        font-size: 14px;
+
+        outline: none;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .contact-form .button {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .form-success {
+        padding-top: 25px;
+    }
+
+    .form-success h2 {
+        margin-bottom: 20px;
+    }
+
+    .form-success p {
+        max-width: 300px;
+    }
+
+
+    /* -----------------------------------------------------
+       CTA SECTIONS
+    ----------------------------------------------------- */
+
+    .cta-section {
+        padding: 80px 22px;
+    }
+
+    .cta-section h2 {
+        max-width: 340px;
+    }
+
+    .cta-section p {
+        max-width: 320px;
+        margin-top: 20px;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+    ----------------------------------------------------- */
+
+    .site-footer {
+        padding: 65px 22px 25px;
+    }
+
+    .footer-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding-bottom: 60px;
+    }
+
+    .footer-branding {
+        max-width: 300px;
+    }
+
+    .footer-logo {
+        font-size: 14px;
+        letter-spacing: 0.13em;
+    }
+
+    .footer-branding p {
+        max-width: 260px;
+        margin-top: 18px;
+        font-size: 12px;
+        line-height: 1.65;
     }
 
     .footer-label {
-        margin-bottom: 18px;
+        margin-bottom: 17px;
+        font-size: 8px;
     }
 
     .footer-nav,
@@ -1687,453 +2282,63 @@ h3 {
     }
 
     .footer-bottom {
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+
+        padding-top: 22px;
+
+        font-size: 7px;
         line-height: 1.5;
     }
 }
 
+
 /* =========================================================
-   MOBILE
+   SMALL PHONES
 ========================================================= */
 
-@media (max-width: 800px) {
-
-    /* -----------------------------------------
-       HEADER
-    ----------------------------------------- */
+@media (max-width: 390px) {
 
     .site-header {
-        height: 75px;
-
-        padding: 0 22px;
-    }
-
-    .site-nav {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .home-page .site-header {
-        color: #fff;
-    }
-
-    .home-page .menu-toggle span {
-        background: #fff;
-    }
-
-
-    /* -----------------------------------------
-       HOME HERO
-    ----------------------------------------- */
-
-    .home-hero {
-        min-height: 680px;
-    }
-
-    .home-hero-content {
-        left: 22px;
-        right: 22px;
-        bottom: 100px;
-    }
-
-    .home-hero h1 {
-        font-size: 65px;
-    }
-
-    .home-hero-content p {
-        font-size: 14px;
-    }
-
-    .hero-actions {
-        flex-wrap: wrap;
-    }
-
-    .hero-bottom {
-        left: 22px;
-        right: 22px;
-        bottom: 25px;
-    }
-
-
-    /* -----------------------------------------
-       HOME INTRO / ABOUT
-    ----------------------------------------- */
-
-    .home-intro,
-    .home-about,
-    .about-story {
-        display: block;
-
-        padding: 100px 22px;
-    }
-
-    .home-intro h2,
-    .home-about h2 {
-        font-size: 60px;
-    }
-
-    .home-intro .large-copy {
-        font-size: 17px;
-    }
-
-
-    /* -----------------------------------------
-       HOME SELL
-    ----------------------------------------- */
-
-    .home-sell {
-        grid-template-columns: 1fr;
-    }
-
-    .home-sell-image {
-        height: 450px;
-    }
-
-    .home-sell-content {
-        padding: 90px 22px;
-    }
-
-    .home-sell-content h2 {
-        font-size: 65px;
-    }
-
-
-    /* -----------------------------------------
-       HOME PROPERTY
-    ----------------------------------------- */
-
-    .home-property {
-        padding: 100px 22px;
-    }
-
-    .section-heading {
-        display: block;
-    }
-
-    .section-heading h2 {
-        font-size: 65px;
-    }
-
-    .section-heading .text-link {
-        margin-top: 35px;
-    }
-
-    .home-property-image {
-        margin-top: 60px;
-    }
-
-    .home-property-image img {
-        aspect-ratio: 4 / 3;
-    }
-
-    .home-property-info {
-        display: block;
-    }
-
-    .property-price {
-        margin-top: 25px;
-    }
-
-
-    /* -----------------------------------------
-       HOME CTA
-    ----------------------------------------- */
-
-    .home-cta {
-        padding: 100px 22px;
-    }
-
-    .home-cta h2 {
-        font-size: 65px;
-    }
-
-
-    /* -----------------------------------------
-       GENERIC PAGE INTRO
-    ----------------------------------------- */
-
-    .page-intro {
-        padding: 80px 22px;
-    }
-
-    .page-intro h1 {
-        font-size: 80px;
-    }
-
-
-    /* -----------------------------------------
-       BUY
-    ----------------------------------------- */
-
-    .featured-listing {
-        padding: 0 22px 100px;
-    }
-
-    .featured-image img {
-        aspect-ratio: 4 / 3;
-    }
-
-    .featured-details {
-        display: block;
-    }
-
-    .featured-details h2 {
-        font-size: 55px;
-    }
-
-    .featured-details .property-price {
-        margin-top: 35px;
-
-        text-align: left;
-    }
-
-    .buy-cta {
-        padding: 100px 22px;
-    }
-
-    .buy-cta h2 {
-        font-size: 65px;
-    }
-
-
-    /* -----------------------------------------
-       SELL
-    ----------------------------------------- */
-
-    .sell-hero {
-        grid-template-columns: 1fr;
-    }
-
-    .sell-hero-image {
-        height: 450px;
-        order: -1;
-    }
-
-    .sell-hero-content {
-        padding: 90px 22px;
-    }
-
-    .sell-hero-content h1 {
-        font-size: 65px;
-    }
-
-    .sell-intro {
-        padding: 100px 22px;
-    }
-
-    .sell-intro h2 {
-        font-size: 65px;
-    }
-
-    .sell-process {
-        padding: 100px 22px;
-    }
-
-    .sell-process-heading h2 {
-        font-size: 65px;
-    }
-
-    .process-grid,
-    .principles-grid {
-        grid-template-columns: 1fr;
-
-        margin-top: 70px;
-    }
-
-    .process-item,
-    .principles-grid > div {
-        border-right: 0;
-    }
-
-    .sell-cta {
-        padding: 100px 22px;
-    }
-
-    .sell-cta h2 {
-        font-size: 65px;
-    }
-
-
-    /* -----------------------------------------
-       RENT
-    ----------------------------------------- */
-
-    .rent-hero {
-        min-height: 650px;
-
-        padding: 90px 22px;
-    }
-
-    .rent-hero h1 {
-        font-size: 70px;
-    }
-
-    .rent-content {
-        grid-template-columns: 1fr;
-
-        gap: 60px;
-
-        padding: 100px 22px;
-    }
-
-    .rent-content h2 {
-        font-size: 60px;
-    }
-
-    .rent-categories {
-        grid-template-columns: 1fr 1fr;
-
-        margin: 0 22px;
-    }
-
-    .rent-category {
-        min-height: 220px;
-    }
-
-    .rent-category h3 {
-        margin-top: 120px;
-    }
-
-    .rent-cta {
-        margin-top: 100px;
-
-        padding: 100px 22px;
-    }
-
-    .rent-cta h2 {
-        font-size: 65px;
-    }
-
-
-    /* -----------------------------------------
-       ABOUT
-    ----------------------------------------- */
-
-    .about-hero {
-        grid-template-columns: 1fr;
-    }
-
-    .about-hero-title {
-        min-height: 450px;
-
-        padding: 80px 22px;
-    }
-
-    .about-hero-title h1 {
-        font-size: 110px;
-    }
-
-    .about-hero-photo {
-        height: 600px;
-    }
-
-    .about-intro {
-        padding: 100px 22px;
-    }
-
-    .about-intro h2 {
-        font-size: 65px;
-    }
-
-    .about-story {
-        padding: 100px 22px;
-    }
-
-    .about-story h2 {
-        font-size: 65px;
-    }
-
-    .about-principles {
-        padding: 100px 22px;
-    }
-
-    .about-principles > h2 {
-        font-size: 65px;
-    }
-
-    .about-closing {
-        padding: 100px 22px;
-    }
-
-    .about-closing h2 {
-        font-size: 65px;
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
-
-    /* -----------------------------------------
-       CONTACT
-    ----------------------------------------- */
-
-    .contact-page {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-intro {
-        min-height: auto;
-
-        padding: 100px 22px;
-    }
-
-    .contact-intro h1 {
-        font-size: 65px;
-    }
-
-    .contact-intro > p {
-        font-size: 15px;
-    }
-
-    .contact-details {
-        margin-top: 50px;
-    }
-
-    .contact-form-wrap {
-        padding: 80px 22px 100px;
-    }
-
-    .contact-form-wrap > .eyebrow {
-        margin-bottom: 45px;
-    }
-
-    .contact-form {
-        max-width: none;
-    }
-
-    .form-group {
-        margin-bottom: 30px;
-    }
-
-    .form-success {
-        padding: 20px 0;
+    .container,
+    .page-container,
+    .section,
+    .contact-intro,
+    .contact-form-wrap,
+    .sell-page,
+    .sell-section,
+    .rent-hero,
+    .about-hero,
+    .cta-section {
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
-    .form-success h2 {
-        font-size: 65px;
+    .hero {
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
-
-    /* -----------------------------------------
-       FOOTER
-    ----------------------------------------- */
-
-    .site-footer {
-        padding: 60px 22px 25px;
+    .hero h1 {
+        font-size: 44px;
     }
 
-    .footer-bottom {
-        display: block;
+    h1 {
+        font-size: 43px;
     }
 
-    .footer-bottom span {
-        display: block;
+    h2 {
+        font-size: 35px;
     }
 
-    .footer-bottom span + span {
-        margin-top: 12px;
+    .site-nav.open {
+        padding-left: 18px;
+        padding-right: 18px;
     }
-
 }

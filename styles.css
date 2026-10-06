@@ -1635,17 +1635,15 @@ h3 {
     letter-spacing: 0.17em;
     color: #88847d;
 }
-
 /* =========================================================
-   QB REALTY GROUP
-   MOBILE — PORTRAIT-FIRST EDITORIAL SYSTEM
+   MOBILE
 ========================================================= */
 
 @media (max-width: 800px) {
 
-    /* =====================================================
+    /* -----------------------------------------
        GLOBAL
-    ===================================================== */
+    ----------------------------------------- */
 
     html,
     body {
@@ -1655,7 +1653,7 @@ h3 {
     }
 
     body {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     img,
@@ -1663,1022 +1661,779 @@ h3 {
         max-width: 100%;
     }
 
-    /* =====================================================
+
+    /* -----------------------------------------
        HEADER
-    ===================================================== */
+    ----------------------------------------- */
 
     .site-header {
-        height: 70px;
-        padding: 0 20px;
-
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 20px 20px 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
         z-index: 100;
     }
 
-    .brand {
-        font-size: 12px;
-        letter-spacing: .13em;
+    .site-header .brand {
+        display: block;
+        font-size: 15px;
+        line-height: 1;
+        letter-spacing: 0.16em;
+        white-space: nowrap;
+        text-align: center;
     }
 
+    /* Always show navigation */
     .site-nav {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: flex;
-
-        width: 28px;
-        height: 22px;
-
-        padding: 0;
-    }
-
-    .menu-toggle span {
-        width: 28px;
-        height: 1px;
-    }
-
-    .menu-toggle span:last-child {
-        width: 19px;
-    }
-
-    /* Mobile navigation */
-
-    .site-nav.open {
-        position: fixed;
-
-        top: 70px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        gap: 0;
-
-        padding: 30px 20px 40px;
-
-        background: #f3f1ec;
-
-        z-index: 99;
-    }
-
-    .site-nav.open a {
+        display: flex !important;
+        position: static !important;
         width: 100%;
-
-        padding: 18px 0;
-
-        border-bottom: 1px solid #d4d1ca;
-
-        font-size: 11px;
-        letter-spacing: .18em;
+        height: auto !important;
+        margin: 18px 0 0;
+        padding: 0 !important;
+        background: transparent !important;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
     }
 
-    .site-nav.open a:first-child {
-        border-top: 1px solid #d4d1ca;
-    }
-
-
-    /* =====================================================
-       GLOBAL TYPOGRAPHY
-    ===================================================== */
-
-    .eyebrow {
+    .site-nav a {
+        display: block;
+        margin: 0;
+        padding: 0;
         font-size: 8px;
-        letter-spacing: .2em;
+        line-height: 1;
+        letter-spacing: 0.15em;
+        white-space: nowrap;
+        text-decoration: none;
     }
 
-    .large-copy {
-        max-width: 100%;
-
-        font-size: 17px;
-        line-height: 1.6;
+    /* Absolutely hide hamburger */
+    .menu-toggle {
+        display: none !important;
+        visibility: hidden !important;
     }
 
-    .text-link {
-        margin-top: 28px;
-
-        font-size: 8px;
-        letter-spacing: .18em;
+    /* Remove arrow/icon pseudo-elements */
+    .site-nav a::before,
+    .site-nav a::after,
+    .button::before,
+    .button::after,
+    .text-link::before,
+    .text-link::after,
+    .property-link::before,
+    .property-link::after,
+    .home-property a::before,
+    .home-property a::after {
+        content: none !important;
+        display: none !important;
     }
 
-    .button {
-        min-height: 48px;
 
-        padding: 0 20px;
+    /* -----------------------------------------
+       HOME HEADER
+    ----------------------------------------- */
 
-        font-size: 8px;
-        letter-spacing: .17em;
+    .home-page .site-header {
+        color: #fff;
+    }
+
+    .home-page .site-header .brand,
+    .home-page .site-header .site-nav a {
+        color: #fff;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        HOME HERO
-    ===================================================== */
+    ----------------------------------------- */
 
     .home-hero {
-        height: calc(100svh - 0px);
+        height: 100svh;
         min-height: 620px;
+        position: relative;
     }
 
     .home-hero-content {
-        left: 20px;
-        right: 20px;
-        bottom: 90px;
-
+        position: absolute;
+        left: 22px;
+        right: 22px;
+        bottom: 80px;
         max-width: none;
     }
 
-    .home-hero-content .eyebrow {
-        font-size: 8px;
-    }
-
     .home-hero h1 {
-        max-width: 370px;
-
-        margin-top: 20px;
-
         font-size: clamp(48px, 14vw, 68px);
-        line-height: .87;
-
-        letter-spacing: -.06em;
+        line-height: 0.88;
+        letter-spacing: -0.045em;
+        max-width: 100%;
     }
 
-    .home-hero-content p {
-        max-width: 320px;
-
-        margin-top: 25px;
-
-        font-size: 13px;
-        line-height: 1.6;
+    .home-hero p {
+        max-width: 330px;
+        margin-top: 22px;
+        font-size: 14px;
+        line-height: 1.5;
     }
 
-    .hero-actions {
+    .home-hero .hero-actions {
+        margin-top: 30px;
         display: flex;
         flex-direction: column;
-
-        gap: 8px;
-
-        width: 100%;
-
-        margin-top: 28px;
+        align-items: flex-start;
+        gap: 12px;
     }
 
-    .hero-actions .button {
-        width: 100%;
+    .home-hero .button {
+        width: auto;
     }
 
     .hero-bottom {
-        left: 20px;
-        right: 20px;
-        bottom: 22px;
-
+        left: 22px;
+        right: 22px;
+        bottom: 20px;
         font-size: 7px;
-        letter-spacing: .16em;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        HOME INTRO
-    ===================================================== */
+    ----------------------------------------- */
 
     .home-intro {
         display: block;
-
-        padding: 90px 20px 100px;
+        padding: 90px 22px;
     }
 
     .home-intro h2 {
-        max-width: 350px;
-
-        margin-top: 32px;
-
-        font-size: clamp(46px, 13vw, 64px);
-        line-height: .88;
-
-        letter-spacing: -.06em;
+        font-size: clamp(44px, 13vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
+        max-width: 100%;
     }
 
-    .home-intro .large-copy {
+    .home-intro-copy {
         margin-top: 35px;
+        max-width: 100%;
+    }
 
-        max-width: 320px;
+    .home-intro-copy p {
+        font-size: 15px;
+        line-height: 1.6;
     }
 
 
-    /* =====================================================
-       HOME SELL
-    ===================================================== */
+    /* -----------------------------------------
+       HOME SELL SECTION
+    ----------------------------------------- */
 
     .home-sell {
-        display: flex;
-        flex-direction: column;
-
+        display: grid;
+        grid-template-columns: 1fr;
         min-height: 0;
     }
 
     .home-sell-image {
-        width: 100%;
-        height: 70vw;
-        min-height: 280px;
-        max-height: 420px;
-
         order: 1;
     }
 
     .home-sell-image img {
         width: 100%;
-        height: 100%;
-
+        height: auto;
+        aspect-ratio: 4 / 5;
         object-fit: cover;
+        display: block;
     }
 
     .home-sell-content {
         order: 2;
-
-        padding: 75px 20px 85px;
-
-        display: block;
+        padding: 75px 22px;
     }
 
     .home-sell-content h2 {
-        max-width: 330px;
-
-        margin-top: 30px;
-
-        font-size: clamp(48px, 13vw, 68px);
-        line-height: .86;
-
-        letter-spacing: -.06em;
+        font-size: clamp(44px, 13vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
     }
 
     .home-sell-content p {
-        max-width: 320px;
-
-        margin-top: 30px;
-
-        font-size: 14px;
-        line-height: 1.65;
+        margin-top: 28px;
+        font-size: 15px;
+        line-height: 1.6;
     }
 
-    .home-sell-content .text-link {
-        margin-top: 30px;
+    .home-sell-content .button {
+        margin-top: 35px;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        HOME PROPERTY
-    ===================================================== */
+    ----------------------------------------- */
 
     .home-property {
-        padding: 90px 20px 100px;
+        padding: 90px 22px;
     }
 
-    .section-heading {
+    .home-property .section-heading {
         display: block;
     }
 
-    .section-heading h2 {
-        max-width: 350px;
-
-        margin-top: 30px;
-
-        font-size: clamp(48px, 13vw, 68px);
-        line-height: .86;
-
-        letter-spacing: -.06em;
+    .home-property h2 {
+        font-size: clamp(44px, 13vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
     }
 
-    .section-heading .text-link {
+    .home-property .property-link {
+        display: inline-block;
         margin-top: 25px;
+        font-size: 9px;
+        letter-spacing: 0.14em;
     }
 
     .home-property-image {
-        margin-top: 50px;
+        margin-top: 45px;
     }
 
     .home-property-image img {
+        width: 100%;
+        height: auto;
         aspect-ratio: 4 / 5;
-    }
-
-    .property-tag {
-        top: 14px;
-        left: 14px;
-
-        padding: 8px 10px;
-
-        font-size: 7px;
+        object-fit: cover;
+        display: block;
     }
 
     .home-property-info {
-        display: block;
-
-        padding-top: 18px;
-        margin-top: 12px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 22px;
     }
 
     .home-property-info h3 {
-        margin-top: 10px;
-
-        font-size: 21px;
-    }
-
-    .property-price {
-        margin-top: 15px;
-
-        font-size: 17px;
+        font-size: 22px;
+        line-height: 1.1;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        HOME ABOUT
-    ===================================================== */
+    ----------------------------------------- */
 
     .home-about {
         display: block;
-
-        padding: 90px 20px 100px;
+        padding: 90px 22px;
     }
 
     .home-about h2 {
-        max-width: 350px;
-
-        margin-top: 32px;
-
-        font-size: clamp(48px, 13vw, 68px);
-        line-height: .86;
-
-        letter-spacing: -.06em;
+        font-size: clamp(44px, 13vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
     }
 
-    .home-about p {
-        max-width: 320px;
-
+    .home-about-copy {
         margin-top: 35px;
+    }
 
-        font-size: 14px;
-        line-height: 1.7;
+    .home-about-copy p {
+        font-size: 15px;
+        line-height: 1.6;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        HOME CTA
-    ===================================================== */
+    ----------------------------------------- */
 
     .home-cta {
-        padding: 95px 20px 100px;
+        padding: 100px 22px;
     }
 
     .home-cta h2 {
-        max-width: 350px;
-
-        margin-top: 32px;
-
-        font-size: clamp(50px, 14vw, 70px);
-        line-height: .84;
-
-        letter-spacing: -.06em;
+        font-size: clamp(44px, 13vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
     }
 
     .home-cta .button {
-        margin-top: 40px;
+        margin-top: 35px;
     }
 
 
-    /* =====================================================
-       GENERIC PAGE INTRO
-    ===================================================== */
+    /* -----------------------------------------
+       GENERAL PAGE INTRO
+    ----------------------------------------- */
 
     .page-intro {
-        padding: 75px 20px 70px;
+        padding: 130px 22px 70px;
     }
 
     .page-intro h1 {
-        max-width: 370px;
-
-        margin-top: 35px;
-
-        font-size: clamp(54px, 15vw, 76px);
-        line-height: .82;
-
-        letter-spacing: -.065em;
+        font-size: clamp(50px, 15vw, 70px);
+        line-height: 0.88;
+        letter-spacing: -0.045em;
     }
 
     .page-intro p {
-        max-width: 320px;
-
-        margin-top: 30px;
-
-        font-size: 14px;
-        line-height: 1.65;
+        margin-top: 25px;
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.6;
     }
 
 
-    /* =====================================================
-       BUY
-    ===================================================== */
+    /* -----------------------------------------
+       BUY / FEATURED LISTING
+    ----------------------------------------- */
 
     .featured-listing {
-        padding: 0 20px 100px;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0 22px 100px;
     }
 
     .featured-image img {
+        width: 100%;
+        height: auto;
         aspect-ratio: 4 / 5;
+        object-fit: cover;
+        display: block;
     }
 
     .featured-details {
-        display: block;
-
-        padding-top: 18px;
-
-        margin-top: 12px;
-    }
-
-    .property-number {
-        font-size: 8px;
+        padding: 45px 0 0;
     }
 
     .featured-details h2 {
-        max-width: 350px;
-
-        margin-top: 25px;
-
-        font-size: clamp(44px, 12vw, 62px);
-        line-height: .88;
+        font-size: clamp(42px, 12vw, 58px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
     }
 
-    .featured-details .property-price {
+    .featured-details .price {
         margin-top: 25px;
-
-        text-align: left;
-
-        font-size: 19px;
+        font-size: 20px;
     }
 
     .property-meta {
-        flex-wrap: wrap;
-
-        gap: 12px 20px;
-
-        margin-top: 30px;
-
-        font-size: 7px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 15px;
+        margin-top: 35px;
     }
 
-    .featured-details p {
-        max-width: 320px;
-
-        margin-top: 25px;
-
-        font-size: 14px;
-        line-height: 1.65;
+    .featured-details .description {
+        margin-top: 35px;
+        font-size: 15px;
+        line-height: 1.6;
     }
 
     .buy-cta {
-        padding: 95px 20px 100px;
+        padding: 100px 22px;
     }
 
     .buy-cta h2 {
-        max-width: 350px;
-
-        margin-top: 32px;
-
-        font-size: clamp(50px, 14vw, 70px);
-        line-height: .84;
-    }
-
-    .buy-cta p {
-        max-width: 320px;
-
-        margin-top: 30px;
-
-        font-size: 14px;
+        font-size: clamp(44px, 13vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        SELL HERO
-    ===================================================== */
+    ----------------------------------------- */
 
     .sell-hero {
-        display: flex;
-        flex-direction: column;
-
+        display: grid;
+        grid-template-columns: 1fr;
         min-height: 0;
     }
 
-    .sell-hero-image {
-        order: 1;
+    .sell-hero-content {
+        padding: 130px 22px 70px;
+    }
 
-        width: 100%;
-        height: 78vw;
-        min-height: 300px;
-        max-height: 470px;
+    .sell-hero-content h1 {
+        font-size: clamp(50px, 15vw, 70px);
+        line-height: 0.88;
+        letter-spacing: -0.045em;
+    }
+
+    .sell-hero-content p {
+        margin-top: 28px;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .sell-hero-image {
+        min-height: 0;
     }
 
     .sell-hero-image img {
         width: 100%;
-        height: 100%;
-
+        height: auto;
+        aspect-ratio: 4 / 5;
         object-fit: cover;
-    }
-
-    .sell-hero-content {
-        order: 2;
-
-        padding: 75px 20px 85px;
-
         display: block;
     }
 
-    .sell-hero-content h1 {
-        max-width: 350px;
 
-        margin-top: 30px;
-
-        font-size: clamp(50px, 14vw, 72px);
-        line-height: .84;
-    }
-
-    .sell-hero-content p {
-        max-width: 320px;
-
-        margin-top: 30px;
-
-        font-size: 14px;
-        line-height: 1.65;
-    }
-
-    .sell-hero-content .button {
-        margin-top: 32px;
-    }
-
-
-    /* =====================================================
+    /* -----------------------------------------
        SELL INTRO
-    ===================================================== */
+    ----------------------------------------- */
 
     .sell-intro {
-        padding: 95px 20px 100px;
+        padding: 100px 22px;
     }
 
     .sell-intro h2 {
-        max-width: 350px;
-
-        margin-top: 32px;
-
-        font-size: clamp(48px, 13vw, 68px);
-        line-height: .86;
+        font-size: clamp(44px, 13vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
     }
 
     .sell-intro p {
-        max-width: 320px;
-
-        margin-top: 35px;
-
+        margin-top: 30px;
         font-size: 15px;
-        line-height: 1.7;
+        line-height: 1.6;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        SELL PROCESS
-    ===================================================== */
+    ----------------------------------------- */
 
     .sell-process {
-        padding: 90px 20px 100px;
+        padding: 100px 22px;
     }
 
-    .sell-process-heading h2 {
-        max-width: 350px;
-
-        margin-top: 32px;
-
-        font-size: clamp(48px, 13vw, 68px);
-        line-height: .86;
+    .sell-process > h2 {
+        font-size: clamp(44px, 13vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
     }
 
     .process-grid {
-        display: block;
-
-        margin-top: 65px;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 55px;
     }
 
     .process-item {
         min-height: 0;
-
-        padding: 28px 0 32px;
-
-        border-top: 1px solid #444;
-        border-right: 0;
-    }
-
-    .process-item:nth-child(2n) {
-        border-right: 0;
+        padding: 28px 0;
+        border-right: none;
+        border-bottom: 1px solid currentColor;
     }
 
     .process-item:last-child {
-        border-bottom: 1px solid #444;
+        border-bottom: none;
     }
 
     .process-item h3 {
-        max-width: 300px;
-
-        margin-top: 28px;
-
-        font-size: 25px;
-        line-height: .95;
+        font-size: 24px;
+        line-height: 1.05;
     }
 
     .process-item p {
-        max-width: 320px;
-
-        margin-top: 18px;
-
-        font-size: 13px;
-        line-height: 1.65;
+        margin-top: 15px;
+        font-size: 14px;
+        line-height: 1.6;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        SELL CTA
-    ===================================================== */
+    ----------------------------------------- */
 
     .sell-cta {
-        padding: 95px 20px 100px;
+        padding: 100px 22px;
     }
 
     .sell-cta h2 {
-        max-width: 350px;
-
-        margin-top: 32px;
-
-        font-size: clamp(50px, 14vw, 70px);
-        line-height: .84;
-    }
-
-    .sell-cta .button {
-        margin-top: 42px;
+        font-size: clamp(44px, 13vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        RENT HERO
-    ===================================================== */
+    ----------------------------------------- */
 
     .rent-hero {
         min-height: 0;
-
-        padding: 85px 20px 90px;
-
-        display: block;
+        padding: 130px 22px 80px;
     }
 
     .rent-hero h1 {
-        max-width: 350px;
-
-        margin-top: 32px;
-
-        font-size: clamp(52px, 14vw, 72px);
-        line-height: .84;
+        font-size: clamp(50px, 15vw, 70px);
+        line-height: 0.88;
+        letter-spacing: -0.045em;
     }
 
     .rent-hero p {
-        max-width: 320px;
-
-        margin-top: 30px;
-
-        font-size: 14px;
-    }
-
-    .rent-hero .button {
-        margin-top: 32px;
+        margin-top: 28px;
+        font-size: 15px;
+        line-height: 1.6;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        RENT CONTENT
-    ===================================================== */
+    ----------------------------------------- */
 
     .rent-content {
-        display: block;
-
-        padding: 90px 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 100px 22px;
     }
 
     .rent-content h2 {
-        max-width: 350px;
-
-        margin-top: 32px;
-
-        font-size: clamp(48px, 13vw, 68px);
-        line-height: .86;
+        font-size: clamp(44px, 13vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
     }
 
     .rent-content p {
-        max-width: 320px;
-
-        margin-top: 35px;
-
-        font-size: 14px;
-        line-height: 1.7;
+        font-size: 15px;
+        line-height: 1.6;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        RENT CATEGORIES
-    ===================================================== */
+    ----------------------------------------- */
 
     .rent-categories {
-        display: block;
-
-        margin: 0 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 22px;
+        border-top: 1px solid currentColor;
     }
 
     .rent-category {
         min-height: 0;
+        padding: 28px 0;
+        border-right: none;
+        border-bottom: 1px solid currentColor;
+    }
 
-        padding: 25px 0 28px;
-
-        border-right: 0;
-        border-left: 0 !important;
+    .rent-category:last-child {
+        border-bottom: none;
     }
 
     .rent-category h3 {
-        margin-top: 25px;
+        margin-top: 35px;
+        font-size: 21px;
+        line-height: 1.1;
+    }
 
-        font-size: 19px;
+    .rent-category p {
+        margin-top: 12px;
+        font-size: 14px;
+        line-height: 1.6;
     }
 
     .rent-cta {
-        margin-top: 90px;
-
-        padding: 95px 20px 100px;
+        margin-top: 80px;
+        padding: 100px 22px;
     }
 
     .rent-cta h2 {
-        max-width: 350px;
-
-        margin-top: 32px;
-
-        font-size: clamp(50px, 14vw, 70px);
-        line-height: .84;
-    }
-
-    .rent-cta .button {
-        margin-top: 42px;
+        font-size: clamp(44px, 13vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        ABOUT HERO
-    ===================================================== */
+    ----------------------------------------- */
 
     .about-hero {
-        display: flex;
-        flex-direction: column;
-
+        display: grid;
+        grid-template-columns: 1fr;
         min-height: 0;
     }
 
     .about-hero-title {
-        order: 1;
-
-        padding: 80px 20px 65px;
-
-        display: block;
+        padding: 130px 22px 70px;
     }
 
     .about-hero-title h1 {
-        max-width: 300px;
-
-        margin-top: 32px;
-
-        font-size: clamp(78px, 22vw, 110px);
-        line-height: .72;
+        font-size: clamp(58px, 18vw, 82px);
+        line-height: 0.85;
+        letter-spacing: -0.055em;
     }
 
     .about-hero-photo {
-        order: 2;
-
-        width: 100%;
-        height: 105vw;
-        min-height: 400px;
-        max-height: 560px;
+        aspect-ratio: 4 / 5;
+        min-height: 0;
     }
 
     .about-hero-photo img {
         width: 100%;
         height: 100%;
-
         object-fit: cover;
+        display: block;
     }
 
-    .about-hero-photo span {
-        bottom: 15px;
-        left: 15px;
-
-        padding: 8px 10px;
-
-        font-size: 7px;
+    .about-hero-photo figcaption {
+        padding: 12px 15px;
+        font-size: 8px;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        ABOUT INTRO
-    ===================================================== */
+    ----------------------------------------- */
 
     .about-intro {
-        padding: 95px 20px 100px;
+        padding: 100px 22px;
     }
 
     .about-intro h2 {
-        max-width: 350px;
-
-        margin-top: 32px;
-
-        font-size: clamp(48px, 13vw, 68px);
-        line-height: .86;
+        font-size: clamp(44px, 13vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
     }
 
     .about-intro p {
-        max-width: 320px;
-
-        margin-top: 35px;
-
+        margin-top: 30px;
         font-size: 15px;
-        line-height: 1.7;
+        line-height: 1.6;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        ABOUT STORY
-    ===================================================== */
+    ----------------------------------------- */
 
     .about-story {
-        display: block;
-
-        padding: 95px 20px 100px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding: 100px 22px;
     }
 
     .about-story h2 {
-        max-width: 350px;
-
-        margin-top: 32px;
-
-        font-size: clamp(48px, 13vw, 68px);
-        line-height: .86;
+        font-size: clamp(44px, 13vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
     }
 
     .about-story p {
-        max-width: 320px;
-
-        margin-top: 35px;
-
-        font-size: 14px;
-        line-height: 1.7;
+        font-size: 15px;
+        line-height: 1.6;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        ABOUT PRINCIPLES
-    ===================================================== */
+    ----------------------------------------- */
 
     .about-principles {
-        padding: 90px 20px 100px;
+        padding: 100px 22px;
     }
 
     .about-principles > h2 {
-        max-width: 350px;
-
-        margin-top: 32px;
-
-        font-size: clamp(48px, 13vw, 68px);
-        line-height: .86;
+        font-size: clamp(44px, 13vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
     }
 
     .principles-grid {
-        display: block;
-
-        margin-top: 65px;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 55px;
     }
 
-    .principles-grid > div {
+    .principle {
         min-height: 0;
-
-        padding: 28px 0 32px;
-
-        border-right: 0;
+        padding: 28px 0;
+        border-right: none;
+        border-bottom: 1px solid currentColor;
     }
 
-    .principles-grid > div:nth-child(2n) {
-        border-right: 0;
+    .principle:last-child {
+        border-bottom: none;
     }
 
-    .principles-grid > div:last-child {
-        border-bottom: 1px solid #444;
+    .principle h3 {
+        font-size: 24px;
+        line-height: 1.05;
     }
 
-    .principles-grid h3 {
-        margin-top: 28px;
-
-        font-size: 22px;
-    }
-
-    .principles-grid p {
-        max-width: 320px;
-
-        margin-top: 18px;
-
-        font-size: 13px;
-        line-height: 1.65;
+    .principle p {
+        margin-top: 15px;
+        font-size: 14px;
+        line-height: 1.6;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        ABOUT CLOSING
-    ===================================================== */
+    ----------------------------------------- */
 
     .about-closing {
-        padding: 100px 20px;
+        padding: 100px 22px;
     }
 
     .about-closing h2 {
-        max-width: 350px;
-
-        font-size: clamp(50px, 14vw, 70px);
-        line-height: .84;
+        font-size: clamp(44px, 13vw, 60px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
     }
 
     .about-closing .button {
-        margin-top: 42px;
+        margin-top: 35px;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        CONTACT
-    ===================================================== */
+    ----------------------------------------- */
 
     .contact-page {
-        display: block;
-
-        min-height: 0;
+        padding: 130px 22px 90px;
     }
 
-    .contact-intro {
-        min-height: auto;
-
-        padding: 80px 20px 75px;
-
-        display: block;
+    .contact-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 65px;
     }
 
     .contact-intro h1 {
-        max-width: 350px;
-
-        margin-top: 32px;
-
-        font-size: clamp(50px, 14vw, 70px);
-        line-height: .84;
+        font-size: clamp(50px, 15vw, 70px);
+        line-height: 0.88;
+        letter-spacing: -0.045em;
     }
 
-    .contact-intro > p {
-        max-width: 320px;
-
-        margin-top: 30px;
-
-        font-size: 14px;
-        line-height: 1.7;
-    }
-
-    .contact-details {
-        gap: 26px;
-
-        margin-top: 50px;
-    }
-
-    .contact-detail {
-        gap: 8px;
-    }
-
-    .contact-detail a {
-        font-size: 11px;
+    .contact-intro p {
+        margin-top: 25px;
+        font-size: 15px;
+        line-height: 1.6;
     }
 
     .contact-form-wrap {
-        padding: 75px 20px 90px;
-
-        display: block;
-    }
-
-    .contact-form-wrap > .eyebrow {
-        margin-bottom: 42px;
+        width: 100%;
     }
 
     .contact-form {
-        max-width: none;
+        width: 100%;
     }
 
     .form-group {
@@ -2686,112 +2441,85 @@ h3 {
     }
 
     .form-group label {
-        margin-bottom: 10px;
-
         font-size: 8px;
+        letter-spacing: 0.15em;
     }
 
     .form-group input,
-    .form-group textarea,
-    .form-group select {
-        padding: 11px 0;
-
-        font-size: 14px;
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        font-size: 15px;
+        padding: 12px 0;
     }
 
     .form-group textarea {
-        min-height: 110px;
+        min-height: 130px;
     }
 
     .contact-form .button {
-        width: 100%;
-
-        margin-top: 8px;
-    }
-
-    .form-success {
-        padding: 20px 0;
-    }
-
-    .form-success h2 {
-        max-width: 300px;
-
-        margin-top: 18px;
-
-        font-size: clamp(50px, 14vw, 70px);
-    }
-
-    .form-success p {
-        max-width: 300px;
-
-        margin-top: 25px;
-
-        font-size: 14px;
-        line-height: 1.7;
+        margin-top: 10px;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------
        FOOTER
-    ===================================================== */
+    ----------------------------------------- */
 
     .site-footer {
-        padding: 70px 20px 25px;
+        padding: 60px 22px 25px;
     }
 
-    .footer-main {
-        display: block;
-
-        padding-bottom: 60px;
+    .footer-top {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 45px;
     }
 
-    .footer-branding {
-        max-width: 290px;
-    }
-
-    .footer-logo {
+    .footer-brand .brand {
         font-size: 14px;
+        letter-spacing: 0.15em;
     }
 
-    .footer-branding p {
-        max-width: 260px;
-
-        margin-top: 18px;
-
-        font-size: 11px;
-        line-height: 1.65;
-    }
-
-    .footer-column {
-        margin-top: 45px;
-    }
-
-    .footer-label {
-        margin-bottom: 18px;
+    .footer-brand p {
+        max-width: 280px;
+        margin-top: 15px;
+        font-size: 13px;
+        line-height: 1.5;
     }
 
     .footer-nav,
     .footer-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 12px;
     }
 
     .footer-nav a,
     .footer-contact a {
         font-size: 9px;
-        letter-spacing: .15em;
+        letter-spacing: 0.14em;
+        text-decoration: none;
+    }
+
+    .footer-nav a::before,
+    .footer-nav a::after,
+    .footer-contact a::before,
+    .footer-contact a::after {
+        content: none !important;
+        display: none !important;
     }
 
     .footer-bottom {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-
-        gap: 9px;
-
-        padding-top: 22px;
-
+        gap: 8px;
+        margin-top: 55px;
+        padding-top: 18px;
+        border-top: 1px solid currentColor;
         font-size: 7px;
-        line-height: 1.5;
+        letter-spacing: 0.12em;
     }
 }
 
@@ -2803,8 +2531,17 @@ h3 {
 @media (max-width: 390px) {
 
     .site-header {
-        padding-left: 18px;
-        padding-right: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .site-nav {
+        gap: 14px;
+    }
+
+    .site-nav a {
+        font-size: 7px;
+        letter-spacing: 0.12em;
     }
 
     .home-hero-content {
@@ -2812,36 +2549,25 @@ h3 {
         right: 18px;
     }
 
-    .home-hero h1 {
-        font-size: 47px;
-    }
-
-    .home-hero-content p {
-        max-width: 290px;
-    }
-
     .home-intro,
-    .home-sell-content,
     .home-property,
     .home-about,
     .home-cta,
-    .page-intro,
-    .featured-listing,
-    .buy-cta,
-    .sell-hero-content,
     .sell-intro,
     .sell-process,
     .sell-cta,
-    .rent-hero,
     .rent-content,
     .rent-cta,
-    .about-hero-title,
     .about-intro,
     .about-story,
     .about-principles,
     .about-closing,
-    .contact-intro,
-    .contact-form-wrap {
+    .contact-page {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .featured-listing {
         padding-left: 18px;
         padding-right: 18px;
     }
@@ -2849,34 +2575,5 @@ h3 {
     .rent-categories {
         margin-left: 18px;
         margin-right: 18px;
-    }
-
-    .home-intro h2,
-    .home-sell-content h2,
-    .section-heading h2,
-    .home-about h2,
-    .home-cta h2,
-    .sell-intro h2,
-    .sell-process-heading h2,
-    .sell-cta h2,
-    .rent-content h2,
-    .rent-cta h2,
-    .about-intro h2,
-    .about-story h2,
-    .about-principles > h2,
-    .about-closing h2 {
-        font-size: 45px;
-    }
-
-    .page-intro h1 {
-        font-size: 52px;
-    }
-
-    .featured-details h2 {
-        font-size: 44px;
-    }
-
-    .about-hero-title h1 {
-        font-size: 80px;
     }
 }

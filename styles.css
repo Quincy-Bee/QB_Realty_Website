@@ -1795,7 +1795,7 @@ h3 {
     }
 
     .home-hero-content .eyebrow {
-        font-size: 8px;
+        font-size: 12px;
     }
 
     .home-hero h1 {
@@ -1803,7 +1803,7 @@ h3 {
 
         margin-top: 20px;
 
-        font-size: clamp(48px, 14vw, 68px);
+        font-size: clamp(48px, 1vw, 68px);
         line-height: .87;
 
         letter-spacing: -.06em;

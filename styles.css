@@ -297,7 +297,7 @@ h3 {
 .home-hero h1 {
     margin-top: 28px;
 
-    font-size: clamp(62px, 9vw, 145px);
+    font-size: clamp(62px, 9vw, 120px);
     line-height: .84;
 
     letter-spacing: -.065em;
@@ -1772,7 +1772,7 @@ h3 {
     }
 
     .home-hero h1 {
-        font-size: clamp(48px, 14vw, 68px);
+        font-size: clamp(48px, 14vw, 48px);
         line-height: 0.88;
         letter-spacing: -0.045em;
         max-width: 100%;

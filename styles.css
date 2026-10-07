@@ -1616,7 +1616,7 @@ h3 {
     margin-top: 40px;
 
     font-size: 12px;
-    font-weight:900;
+    font-weight: 900;
     letter-spacing: .17em;
 
     border-bottom: 1px solid currentColor;
@@ -1628,6 +1628,7 @@ h3 {
 .about-track-record:hover {
     opacity: .5;
 }
+
 
 /* =========================================================
    MOBILE — PORTRAIT FIRST
@@ -1798,7 +1799,7 @@ h3 {
     }
 
     .home-hero h1 {
-        max-width: 370px;
+        max-width: 350px;
 
         margin-top: 20px;
 
@@ -1809,7 +1810,7 @@ h3 {
     }
 
     .home-hero-content p {
-        max-width: 320px;
+        max-width: 297px;
 
         margin-top: 25px;
 
@@ -1857,16 +1858,16 @@ h3 {
 
         margin-top: 32px;
 
-        font-size: clamp(46px, 13vw, 64px);
+        font-size: clamp(46px, 1vw, 64px);
         line-height: .88;
 
-        letter-spacing: -.06em;
+        letter-spacing: -.08em;
     }
 
     .home-intro .large-copy {
         margin-top: 35px;
 
-        max-width: 320px;
+        max-width: 480px;
     }
 
 
@@ -3064,9 +3065,76 @@ h3 {
     }
 
     .about-track-record {
-    margin-top: 30px;
-    font-size: 8px;
-    letter-spacing: .18em;
+        margin-top: 30px;
+        font-size: 8px;
+        letter-spacing: .18em;
+    }
 }
+
+
+/* =========================================================
+   MOBILE NAV — KEEP LINKS VISIBLE ON ALL PHONES
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .brand {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    .site-nav {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        gap: 14px;
+
+        flex: 1;
+
+        min-width: 0;
+    }
+
+    .site-nav a {
+        display: block !important;
+
+        font-size: 8px;
+        letter-spacing: .12em;
+
+        white-space: nowrap;
+    }
+
+    .menu-toggle {
+        display: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .site-header {
+        gap: 7px;
+    }
+
+    .site-nav {
+        gap: 7px;
+    }
+
+    .site-nav a {
+        font-size: 7px;
+        letter-spacing: .06em;
+    }
 
 }

@@ -1815,7 +1815,7 @@ h3 {
     }
 
     .home-intro h2 {
-        font-size: clamp(44px, 13vw, 48px);
+        font-size: clamp(44px, 13vw, 38px);
         line-height: 0.92;
         letter-spacing: -0.04em;
         max-width: 100%;

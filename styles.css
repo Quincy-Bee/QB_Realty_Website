@@ -2402,178 +2402,75 @@ h3 {
     }
 
 
-    /* -----------------------------------------
-       CONTACT
-    ----------------------------------------- */
+    @media (max-width: 800px) {
 
     .contact-page {
+        width: 100%;
         padding: 130px 22px 90px;
+        box-sizing: border-box;
     }
 
     .contact-layout {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 65px;
+        display: block;
+        width: 100%;
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    .contact-intro {
+        width: 100%;
+        max-width: 520px;
+        margin: 0 auto 65px;
     }
 
     .contact-intro h1 {
-        font-size: clamp(50px, 15vw, 70px);
-        line-height: 0.88;
+        max-width: 100%;
+        margin: 0;
+        font-size: clamp(48px, 14vw, 64px);
+        line-height: 0.9;
         letter-spacing: -0.045em;
     }
 
     .contact-intro p {
-        margin-top: 25px;
+        max-width: 420px;
+        margin: 25px 0 0;
         font-size: 15px;
         line-height: 1.6;
     }
 
     .contact-form-wrap {
         width: 100%;
+        max-width: 520px;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     .contact-form {
         width: 100%;
+        max-width: 520px;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     .form-group {
-        margin-bottom: 28px;
-    }
-
-    .form-group label {
-        font-size: 8px;
-        letter-spacing: 0.15em;
+        width: 100%;
+        margin: 0 0 28px;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     .form-group input,
     .form-group select,
     .form-group textarea {
         width: 100%;
-        font-size: 15px;
-        padding: 12px 0;
-    }
-
-    .form-group textarea {
-        min-height: 130px;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .contact-form .button {
-        margin-top: 10px;
-    }
-
-
-    /* -----------------------------------------
-       FOOTER
-    ----------------------------------------- */
-
-    .site-footer {
-        padding: 60px 22px 25px;
-    }
-
-    .footer-top {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .footer-brand .brand {
-        font-size: 14px;
-        letter-spacing: 0.15em;
-    }
-
-    .footer-brand p {
-        max-width: 280px;
-        margin-top: 15px;
-        font-size: 13px;
-        line-height: 1.5;
-    }
-
-    .footer-nav,
-    .footer-contact {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .footer-nav a,
-    .footer-contact a {
-        font-size: 9px;
-        letter-spacing: 0.14em;
-        text-decoration: none;
-    }
-
-    .footer-nav a::before,
-    .footer-nav a::after,
-    .footer-contact a::before,
-    .footer-contact a::after {
-        content: none !important;
-        display: none !important;
-    }
-
-    .footer-bottom {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin-top: 55px;
-        padding-top: 18px;
-        border-top: 1px solid currentColor;
-        font-size: 7px;
-        letter-spacing: 0.12em;
-    }
-}
-
-
-/* =========================================================
-   SMALL PHONES
-========================================================= */
-
-@media (max-width: 390px) {
-
-    .site-header {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .site-nav {
-        gap: 14px;
-    }
-
-    .site-nav a {
-        font-size: 7px;
-        letter-spacing: 0.12em;
-    }
-
-    .home-hero-content {
-        left: 18px;
-        right: 18px;
-    }
-
-    .home-intro,
-    .home-property,
-    .home-about,
-    .home-cta,
-    .sell-intro,
-    .sell-process,
-    .sell-cta,
-    .rent-content,
-    .rent-cta,
-    .about-intro,
-    .about-story,
-    .about-principles,
-    .about-closing,
-    .contact-page {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    .featured-listing {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    .rent-categories {
-        margin-left: 18px;
-        margin-right: 18px;
+        width: auto;
+        min-width: 150px;
     }
 }

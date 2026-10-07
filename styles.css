@@ -2449,7 +2449,7 @@ h3 {
     .about-hero-title {
         order: 1;
 
-        padding: 80px 20px 65px;
+        padding: 80px 20px 35px;
 
         display: block;
     }
@@ -2465,7 +2465,6 @@ h3 {
 
     .about-hero-photo {
         order: 2;
-
         width: 100%;
         height: 105vw;
         min-height: 400px;
@@ -2474,17 +2473,14 @@ h3 {
 
     .about-hero-photo img {
         width: 100%;
-        height: 100%;
-
+        height: 110%;
         object-fit: cover;
     }
 
     .about-hero-photo span {
         bottom: 15px;
         left: 15px;
-
         padding: 8px 10px;
-
         font-size: 7px;
     }
 
@@ -2502,7 +2498,7 @@ h3 {
 
         margin-top: 32px;
 
-        font-size: clamp(48px, 13vw, 68px);
+        font-size: clamp(48px, 1vw, 68px);
         line-height: .86;
     }
 
@@ -2609,9 +2605,9 @@ h3 {
     }
 
     .about-closing h2 {
-        max-width: 350px;
+        max-width: 300px;
 
-        font-size: clamp(50px, 14vw, 70px);
+        font-size: clamp(40px, 2vw, 70px);
         line-height: .84;
     }
 

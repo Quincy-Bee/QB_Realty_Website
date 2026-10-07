@@ -2402,60 +2402,73 @@ h3 {
     }
 
 
-    @media (max-width: 800px) {
+    /* -----------------------------------------
+       CONTACT — MOBILE
+    ----------------------------------------- */
 
     .contact-page {
         width: 100%;
+        max-width: none;
         padding: 130px 22px 90px;
         box-sizing: border-box;
     }
 
     .contact-layout {
-        display: block;
-        width: 100%;
-        max-width: 520px;
-        margin: 0 auto;
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
     }
 
     .contact-intro {
-        width: 100%;
-        max-width: 520px;
-        margin: 0 auto 65px;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 0 60px !important;
+        padding: 0 !important;
     }
 
     .contact-intro h1 {
-        max-width: 100%;
+        width: 100%;
+        max-width: none;
         margin: 0;
-        font-size: clamp(48px, 14vw, 64px);
+        font-size: clamp(46px, 13vw, 64px);
         line-height: 0.9;
         letter-spacing: -0.045em;
     }
 
-    .contact-intro p {
-        max-width: 420px;
+    .contact-intro > p {
+        width: 100%;
+        max-width: none;
         margin: 25px 0 0;
         font-size: 15px;
         line-height: 1.6;
     }
 
     .contact-form-wrap {
-        width: 100%;
-        max-width: 520px;
-        margin: 0 auto;
-        padding: 0;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
         box-sizing: border-box;
     }
 
+    .contact-form-wrap > .eyebrow {
+        margin-bottom: 40px;
+    }
+
     .contact-form {
-        width: 100%;
-        max-width: 520px;
-        margin: 0 auto;
-        padding: 0;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
         box-sizing: border-box;
     }
 
     .form-group {
-        width: 100%;
+        width: 100% !important;
+        max-width: none !important;
         margin: 0 0 28px;
         padding: 0;
         box-sizing: border-box;
@@ -2464,13 +2477,22 @@ h3 {
     .form-group input,
     .form-group select,
     .form-group textarea {
-        width: 100%;
-        max-width: 100%;
+        display: block;
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0;
         box-sizing: border-box;
     }
 
-    .contact-form .button {
-        width: auto;
-        min-width: 150px;
+    .form-group textarea {
+        min-height: 150px;
     }
+
+    .contact-form .button {
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+
 }
